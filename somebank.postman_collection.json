@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "10190194-1559-4a20-a94c-1dd589f81d3c",
+		"name": "somebank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get transaction by reference",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}:{{port}}/transaction/ABC",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"transaction",
+						"ABC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reference\": \"ABC\",\n    \"channel\": \"ATM\",\n    \"amount\": \"3.2\",\n    \"fee\": \"1\",\n    \"transactionDate\": \"2023-05-15T16:00:00.000\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
