@@ -10,7 +10,7 @@
 
 This projects aims to demonstrate what hexagonal and CQRS architectures would look like in a project.
 
-The whole project is oversimplified in order to help understand those architecture and to help focus on what is actually
+The whole project is oversimplified in order to help understand those architectures and to help focus on what is actually
 important on those designs. It covers two use cases:
 
 1. Create a transfer
@@ -32,7 +32,7 @@ responsibilities for the different patterns covered.
 
 # LAYERS
 
-ADD IMAGE
+![alt text](https://github.com/dFarras/hexagonal-cqrs-demo/blob/master/somebank%20module%20design.drawio.png?raw=true)
 
 In every hexagonal project there are two important layers, those are the ones that deal with data entering the system
 and those who handle data exiting. The idea is that your business logic should not be aware of where the data it is
